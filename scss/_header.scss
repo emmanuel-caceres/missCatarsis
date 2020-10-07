@@ -1,0 +1,82 @@
+
+// header nav
+
+.header__container{
+    padding: 0;
+}
+
+// caracteristicas logo
+.header__nav-logo{
+    width: 100px;
+    margin: 10px 0px 10px 40px;
+}
+
+//caracteristicas aplicadas a barra nav
+.header__nav-prop{
+    width: 100vw;
+    padding: 0; 
+    position: fixed;
+    z-index: 90;
+    background-color: rgba($color: white, $alpha: 0.9);
+}
+
+.navbar-a-prop{
+    font-size: 1.1rem;
+    padding: 10px 50px;
+    opacity: 0.8;
+
+    &:hover{
+        text-decoration: none;
+        opacity: 1;
+        transition: all .5s;
+    }
+}
+
+.header__nav__div-prop{
+    display: flex;
+    justify-content: center;    
+    
+}
+
+.header__nav__button{
+    font-size: 2rem;
+    line-height: 1;
+    background-color: transparent;
+    border: none;
+    
+    &:focus{
+        border: none;
+        background-color: white;
+    }
+
+    &:active{
+        border: none;
+        background-color: white;
+    }
+}
+
+.active-nav{
+    font-weight: bold;
+}
+
+@media (max-width: 1000px){
+    
+    .nav__prop{
+        background-color: rgba($color: white, $alpha: 0.9);
+        border-radius: 5px 0 0 5px;
+        z-index: 90;
+    }
+
+    .header__nav__div-prop{
+        justify-content: flex-end;
+    }
+
+}
+
+@media (min-width: 992px){
+    
+    .header__nav__button{
+        display: none;
+    }
+
+}

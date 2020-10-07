@@ -1,0 +1,178 @@
+// header
+
+@import "font.scss";
+@import "header.scss";
+@import "carrito.scss";
+@import "index.scss";
+
+// reseteo
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+a{
+    color: black;
+
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+// textos
+
+h3{
+    font-size: 16px;
+    margin: 10px 0 0 5px;
+    text-align: center;
+}
+
+h4{
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+}
+
+h5{
+    font-size: 14px;
+    padding: 7px 0;
+}
+
+
+// Tienda
+
+.animacion-tarjetas{
+    margin-top: 0px;
+    animation-name: animacion-tarjetas;
+    animation-duration: 1s;
+}
+
+@keyframes animacion-tarjetas {
+    0% { margin-top: 30px; }
+    100% { margin-top: 0px; }
+}
+
+.contenedor-filtros{
+    padding: 20px 10px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filtro{
+    font-size: 14px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.filtroActivo{
+        font-weight: 700;
+}
+
+.contenedor-tarjeta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    transition: all 0.5s;
+}
+
+.tarjeta{
+    width: 100%;
+    height: 310px;
+    background-color: #efefef;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 6px rgba($color: #000000, $alpha: 0.3);
+    transition: all 0.5s;
+
+    &:hover{
+        box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.3);
+    }
+}
+
+.div__img-tarjeta{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+button{
+    border: none;   
+    height: 40px;  
+    border-radius: 0 0 5px 5px;  
+    
+    &:hover{
+        background-color: salmon;
+        font-weight: bold;
+    }
+}
+
+.ancho100{
+    width: 100%;
+    border-radius: 0;
+}
+
+.row-padding-0{
+    margin: 0;
+}
+
+//carrousel
+
+.color-flecha{
+    filter: invert(100%);
+}
+
+// footer
+
+footer{
+    padding: 100px 0 50px 0;
+    background-color: rosybrown;
+    
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        div ul li a:hover{
+            color: white;
+        }
+
+        div div{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            a{
+                margin: 0 10px;
+
+                &:hover{
+                    color: rgba($color: white, $alpha: .5);
+                }
+            }
+        }
+    }
+}
+
+.icon{
+    font-size: 30px;
+}
+
+@media (max-width: 1000px){
+    
+    .row-flex-center{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .tarjeta{
+        margin-top: 20px;
+    }
+}
+

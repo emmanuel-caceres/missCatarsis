@@ -1,14 +1,14 @@
 // Objetos - Contructor de productos
 
-function nuevoProducto (nombre, tamaño, precio, categoria, imagen, dir, nombreConst, id) {
+function nuevoProducto(nombre, tamaño, precio, categoria, imagen, dir, nombreConst) {
     this.nombre = nombre,
-    this.tamaño = tamaño,
-    this.cantidad = 1,
-    this.precio = precio,
-    this.categoria = categoria,
-    this.imagen = imagen,
-    this.direccion = dir,
-    this.nombreConst = nombreConst
+        this.tamaño = tamaño,
+        this.cantidad = 1,
+        this.precio = precio,
+        this.categoria = categoria,
+        this.imagen = imagen,
+        this.direccion = dir,
+        this.nombreConst = nombreConst
 }
 
 // Productos
@@ -33,3 +33,5 @@ const nocturnaA5 = new nuevoProducto("Nocturna A5", "A5", 800, "ilustraciones", 
 
 const estudioA4 = new nuevoProducto("Estudio A4", "A4", 1200, "ilustraciones", "imagenes/00_estudio.jpg", "loba.html", "estudioA4");
 const estudioA5 = new nuevoProducto("Estudio A5", "A5", 800, "ilustraciones", "imagenes/00_estudio.jpg", "loba.html", "estudioA5");
+
+

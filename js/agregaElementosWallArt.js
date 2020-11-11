@@ -1,4 +1,3 @@
-// Tarjetas 
 var productos = [lobaA4, tierraA4, cicloA4, edadA4, secretosA4, nocturnaA4, estudioA4, lobaA5, tierraA5, cicloA5, edadA5, secretosA5, nocturnaA5, estudioA5];
 
 for (let producto of productos) {
@@ -6,7 +5,6 @@ var contenedorTarjetas = document.querySelector('.row-flex-center');
 var tarjeta = document.createElement('div');
 tarjeta.classList.add('col-11', 'col-sm-6', 'col-lg-4', 'col-xl-3', 'contenedor-tarjeta');
 tarjeta.setAttribute('category',`${producto.categoria}`);
-tarjeta.setAttribute('tamanio',`${producto.tamaño}`);
 tarjeta.innerHTML = `<div class="tarjeta"> 
 <img src="${producto.imagen}" alt="ilustracion-1" class="div__img-tarjeta">
     <h3> ${producto.nombre} </h3>
@@ -16,34 +14,42 @@ tarjeta.innerHTML = `<div class="tarjeta">
 contenedorTarjetas.appendChild(tarjeta); 
  };
 
-// agrega el carrito y el subtotal a la lista de productos del sidebar
+// Crea los productos dentro de sidebar
 
-
-function agregaItem(){
-    for (i=0; i < carritoCompras.length; i++) {
-    let listaCarrito = document.querySelector('.listaProductos');
-    let itemCarrito = document.createElement('ul');
-    itemCarrito.innerHTML = `<li> <img src="${carritoCompras[i].imagen}" alt="" class="imgCarrito"> </li>
-    <li> ${carritoCompras[i].nombre} </li>
-    <li> ${carritoCompras[i].cantidad}un </li>
-    <li> $ ${carritoCompras[i].precio}</li>
-    <li class="botonAgregarObj"> <button id="${carritoCompras[i].nombreConst}">X</button> </li>`;
-    itemCarrito.classList.add('ulCarrito');
-    listaCarrito.appendChild(itemCarrito);
-}
+function agregaItem() {
+    for (i = 0; i < carritoCompras.length; i++) {
+        let listaCarrito = document.querySelector('.listaProductos');
+        let itemCarrito = document.createElement('ul');
+        itemCarrito.innerHTML = `<li> <img src="${carritoCompras[i].imagen}" alt="" class="imgCarrito"> </li>
+        <li> ${carritoCompras[i].nombre} </li>
+        <li> ${carritoCompras[i].cantidad}un </li>
+        <li> $ ${carritoCompras[i].precio}</li>
+        <li class="botonAgregarObj"> <button id="${carritoCompras[i].nombreConst}">X</button> </li>`;
+        itemCarrito.classList.add('ulCarrito');
+        listaCarrito.appendChild(itemCarrito);
+    }
     creaSubtotal();
+    // Alert
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        showConfirmButton: false,
+        timer: 1000,
+        width: "100px",
+        toast: true
+    })
 }
 
 // Arma subtotal
 let b = 0;
 var subtotal = 0;
 
-function creaSubtotal(){
-for (i=0; i < carritoCompras.length; i++){
-    a = carritoCompras[i].precio * carritoCompras[i].cantidad;
-    var c = (a + b);
-    b = c;
-}
+function creaSubtotal() {
+    for (i = 0; i < carritoCompras.length; i++) {
+        a = carritoCompras[i].precio * carritoCompras[i].cantidad;
+        var c = (a + b);
+        b = c;
+    }
     subtotal = c
     b = 0
     borraSubtotalAnterior();
@@ -58,19 +64,43 @@ for (i=0; i < carritoCompras.length; i++){
 
 // evita que se dupliquen los items del sideBar
 
-function borraContenido(){
+function borraContenido() {
     let padreContenido = document.querySelector('.listaProductos');
-    while (padreContenido.firstChild){
+    while (padreContenido.firstChild) {
         padreContenido.removeChild(padreContenido.firstChild)
     }
 }
 
 // evita que se dupliquen los subtotales del sideBar
 
-function borraSubtotalAnterior(){
+function borraSubtotalAnterior() {
     let padreSubtotal = document.querySelector('.subtotal');
-    while (padreSubtotal.firstChild){
+    while (padreSubtotal.firstChild) {
         padreSubtotal.removeChild(padreSubtotal.firstChild)
     }
 }
+
+// // Trae JSON con los productos con Ajax
+// $(function tarjetasAjax() {
+//     $.ajax({
+//         url: 'productos.json',
+//         dataType: 'json',
+//         success: function (data) {
+//             console.log(data)
+//             data.forEach(element => {
+//                 $('.row-flex-center').append(`
+//                 <div class="col-11 col-sm-6 col-lg-4 col-xl-3 contenedor-tarjeta" category="${element.categoria}"> <div class="tarjeta"> 
+//                 <img src="${element.imagen}" alt="ilustracion-1" class="div__img-tarjeta">
+//                     <h3> ${element.nombre} </h3>
+//                     <h4 class="text-center"> $ ${element.precio} </h4>
+//                     <button class="botonTarjeta" id="${element.nombreConst}">Agregar</button>
+//                 </div> </div>
+//                 `)
+//                 productos.push(element)
+//             });
+//         }
+//     });
+// })
+
+// const productos = [];
 

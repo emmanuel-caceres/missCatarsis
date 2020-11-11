@@ -96,7 +96,24 @@
   right: 60px;
   top: 20px;
   z-index: 100;
-  transition: 0.5s; }
+  transition: 0.5s;
+  display: flex;
+  align-items: flex-start; }
+  .botonCarrito .contador div {
+    width: 25px;
+    height: 25px;
+    background-color: salmon;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    transform: translate(-10px); }
+    .botonCarrito .contador div p {
+      font-weight: bold;
+      font-size: 14px;
+      margin: 0;
+      color: white; }
   .botonCarrito:hover {
     opacity: 0.3; }
 
@@ -109,63 +126,131 @@
   width: 300px;
   height: 100%;
   transform: translateX(300px);
-  background-color: #efefef;
   transition: 0.5s;
   padding: 20px 0px 0px 0px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  z-index: 98;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  background-color: #efefef; }
   .contenedorCarritoSideBar:hover {
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.4); }
+
+.lll {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 98;
+  height: 100%; }
 
 .abrirCarrito {
   transform: translateX(0px); }
 
 .cerrarCarrito {
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   cursor: pointer; }
 
 .tienda {
-  padding: 150px 0 200px 0; }
+  padding: 150px 0 250px 0; }
 
-.listaProductos, .listaProductosFinal {
+.listaProductos {
   width: 100%;
   padding: 0px 20px;
   margin-top: 20px; }
-  .listaProductos ul.ulCarrito, .listaProductosFinal ul.ulCarrito {
+  .listaProductos ul.ulCarrito {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: space-between; }
-    .listaProductos ul.ulCarrito li, .listaProductosFinal ul.ulCarrito li {
-      padding: 10px 0;
+    .listaProductos ul.ulCarrito li {
       font-size: 14px;
-      box-sizing: border-box; }
-      .listaProductos ul.ulCarrito li button.decrease, .listaProductos ul.ulCarrito li .increase, .listaProductosFinal ul.ulCarrito li button.decrease, .listaProductosFinal ul.ulCarrito li .increase {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px; }
+      .listaProductos ul.ulCarrito li button.mas, .listaProductos ul.ulCarrito li .menos {
         height: 27px;
+        width: 27px;
         font-size: 20px;
-        padding: 10px; }
-        .listaProductos ul.ulCarrito li button.decrease:hover, .listaProductos ul.ulCarrito li .increase:hover, .listaProductosFinal ul.ulCarrito li button.decrease:hover, .listaProductosFinal ul.ulCarrito li .increase:hover {
-          text-decoration: none; }
-      .listaProductos ul.ulCarrito li input, .listaProductosFinal ul.ulCarrito li input {
+        padding: 10px;
+        background-color: #efefef;
+        border-radius: 50%;
+        margin: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder; }
+        .listaProductos ul.ulCarrito li button.mas:hover, .listaProductos ul.ulCarrito li .menos:hover {
+          text-decoration: none;
+          background-color: salmon;
+          color: white; }
+      .listaProductos ul.ulCarrito li input {
         width: 40px;
         text-align: center; }
-      .listaProductos ul.ulCarrito li .imgCarrito, .listaProductosFinal ul.ulCarrito li .imgCarrito {
+      .listaProductos ul.ulCarrito li .imgCarrito {
         width: 40px;
         height: 40px;
         object-fit: cover;
         border-radius: 50%; }
-    .listaProductos ul.ulCarrito button, .listaProductosFinal ul.ulCarrito button {
+    .listaProductos ul.ulCarrito button {
       font-size: 14px;
       background-color: white; }
-      .listaProductos ul.ulCarrito button:hover, .listaProductosFinal ul.ulCarrito button:hover {
+      .listaProductos ul.ulCarrito button:hover {
         font-weight: 100;
         text-decoration: underline; }
+
+.listaProductosFinal {
+  width: 100%;
+  padding: 0px 20px;
+  margin-top: 20px; }
+  .listaProductosFinal div.ulCarrito {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .listaProductosFinal div.ulCarrito div {
+      font-size: 14px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px; }
+      .listaProductosFinal div.ulCarrito div button.mas, .listaProductosFinal div.ulCarrito div .menos {
+        height: 27px;
+        width: 27px;
+        font-size: 20px;
+        padding: 10px;
+        background-color: #efefef;
+        border-radius: 50%;
+        margin: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder; }
+        .listaProductosFinal div.ulCarrito div button.mas:hover, .listaProductosFinal div.ulCarrito div .menos:hover {
+          text-decoration: none;
+          background-color: salmon;
+          color: white; }
+      .listaProductosFinal div.ulCarrito div button {
+        font-size: 14px;
+        background-color: white; }
+        .listaProductosFinal div.ulCarrito div button:hover {
+          font-weight: 100;
+          text-decoration: underline; }
+      .listaProductosFinal div.ulCarrito div input {
+        width: 40px;
+        text-align: center; }
+      .listaProductosFinal div.ulCarrito div .imgCarrito {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%; }
 
 .alineaCarritoVacio {
   width: 100%;
@@ -201,11 +286,6 @@ button.comprar {
   border-radius: 6px;
   background-color: rgba(250, 128, 114, 0.5);
   margin-top: 20px; }
-
-@media (max-width: 1025px) {
-  .botonCarrito {
-    right: 330px;
-    top: 30px; } }
 
 @media (max-width: 770px) {
   .resumenCarrito {

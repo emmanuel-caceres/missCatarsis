@@ -6,6 +6,27 @@
     top: 20px;
     z-index: 100;
     transition: 0.5s;
+    display: flex;
+    align-items: flex-start;
+
+    .contador div {
+        width: 25px;
+        height: 25px;
+        background-color: salmon;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        transform: translate(-10px);
+
+        p{
+            font-weight: bold;
+            font-size: 14px;
+            margin: 0;
+            color: white;
+        }
+    }
 
     &:hover{
         opacity: 0.3;
@@ -23,19 +44,26 @@
     width: 300px;
     height: 100%;
     transform: translateX(300px);
-    background-color: #efefef;
     transition: 0.5s;
     padding: 20px 0px 0px 0px;
     box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.3);
-    z-index: 98;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #efefef;
 
     &:hover{
         box-shadow: 0 0 35px rgba($color: #000000, $alpha: 0.4);
     }
 
+}
+
+.lll{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 98;
+    height: 100%;
 }
 
 .abrirCarrito{
@@ -44,17 +72,17 @@
 
 .cerrarCarrito{
     width: 100%;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
     cursor: pointer;
 }
 
 .tienda{
-    padding: 150px 0 200px 0;
+    padding: 150px 0 250px 0;
 }
 
 // Lista de products
 
-.listaProductos, .listaProductosFinal{
+.listaProductos{
     width: 100%;
     padding: 0px 20px;
     margin-top: 20px;
@@ -69,18 +97,32 @@
             justify-content: space-between;
 
             li{
-                padding: 10px 0;
                 font-size: 14px;
                 box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
 
-                button.decrease, .increase{
+                button.mas, .menos{
 
                     height: 27px;
+                    width: 27px;
                     font-size: 20px;
                     padding: 10px;
+                    background-color: #efefef;
+                    border-radius: 50%;
+                    margin: 0 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: bolder;
+                    
 
                     &:hover{
                         text-decoration: none;
+                        background-color: salmon;
+                        color: white;
                     }
                 }
 
@@ -108,6 +150,76 @@
         }
     }
 }
+
+.listaProductosFinal{
+    width: 100%;
+    padding: 0px 20px;
+    margin-top: 20px;
+        
+        div.ulCarrito{
+            
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            div{
+                font-size: 14px;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+
+                button.mas, .menos{
+
+                    height: 27px;
+                    width: 27px;
+                    font-size: 20px;
+                    padding: 10px;
+                    background-color: #efefef;
+                    border-radius: 50%;
+                    margin: 0 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-weight: bolder;
+                    
+
+                    &:hover{
+                        text-decoration: none;
+                        background-color: salmon;
+                        color: white;
+                    }
+                }
+
+                button{
+                    font-size: 14px;
+                    background-color: white;
+                    
+                    &:hover{
+                        font-weight: 100;
+                        text-decoration: underline;
+                    }
+                }
+
+                input{
+                    width: 40px;
+                    text-align: center;
+                }
+
+                .imgCarrito{
+                    width: 40px;
+                    height: 40px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
 
 .alineaCarritoVacio{
     width: 100%;
@@ -153,15 +265,6 @@ button.comprar{
     border-radius: 6px;
     background-color: rgba($color: salmon, $alpha: 0.5);
     margin-top: 20px;
-}
-
-@media (max-width: 1025px){
-
-    .botonCarrito{
-        right: 330px;
-        top: 30px;
-    }
-
 }
 
 @media (max-width: 770px){

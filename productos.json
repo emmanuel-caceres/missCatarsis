@@ -1,0 +1,141 @@
+[{
+    "cantidad": 1,
+    "categoria": "ilustraciones",
+    "direccion": "loba.html",
+    "imagen": "imagenes/00_loba.jpg",
+    "nombre": "Loba A4",
+    "nombreConst": "lobaA4",
+    "precio": 1200,
+    "tamaño": "A4"
+},
+{
+    "cantidad": 1,
+    "categoria": "ilustraciones",
+    "direccion": "loba.html",
+    "imagen": "imagenes/00_tierra.jpg",
+    "nombre": "Tierra A4",
+    "nombreConst": "tierraA4",
+    "precio": 1500,
+    "tamaño": "A4"
+},
+{
+    "cantidad": 1,
+    "categoria": "tela",
+    "direccion": "loba.html",
+    "imagen": "imagenes/00_ciclo.jpg",
+    "nombre": "Ciclo A4",
+    "nombreConst": "cicloA4",
+    "precio": 1350,
+    "tamaño": "A4"
+},
+{
+    "cantidad": 1,
+    "categoria": "acuarelas",
+    "direccion": "loba.html",
+    "imagen": "imagenes/00_edad.jpg",
+    "nombre": "Edad A4",
+    "nombreConst": "edadA4",
+    "precio": 1200,
+    "tamaño": "A4"
+},
+{
+    "cantidad": 1,
+    "categoria": "textil",
+    "direccion": "loba.html",
+    "imagen": "imagenes/00_secretos.jpg",
+    "nombre": "Secretos A4",
+    "nombreConst": "secretosA4",
+    "precio": 2300,
+    "tamaño": "A4"
+},
+{
+    "cantidad": 1,
+    "categoria": "ilustraciones",
+    "direccion": "loba.html",
+    "imagen": "imagenes/00_nocturna.jpg",
+    "nombre": "Nocturna A4",
+    "nombreConst": "nocturnaA4",
+    "precio": 1400,
+    "tamaño": "A4"
+},
+{
+    "cantidad": 1,
+    "categoria": "ilustraciones",
+    "direccion": "loba.html",
+    "imagen": "imagenes/00_estudio.jpg",
+    "nombre": "Estudio A4",
+    "nombreConst": "estudioA4",
+    "precio": 2300,
+    "tamaño": "A4"
+},
+{
+    "cantidad": 1,
+    "categoria": "ilustraciones",
+    "direccion": "loba.html",
+    "imagen": "imagenes/00_loba.jpg",
+    "nombre": "Loba A5",
+    "nombreConst": "lobaA5",
+    "precio": 800,
+    "tamaño": "A5"
+},
+{
+    "cantidad": 1,
+    "categoria": "ilustraciones",
+    "direccion": "loba.html",
+    "imagen": "imagenes/00_tierra.jpg",
+    "nombre": "Tierra A5",
+    "nombreConst": "tierraA5",
+    "precio": 790,
+    "tamaño": "A5"
+},
+{
+    "cantidad": 1,
+    "categoria": "tela",
+    "direccion": "loba.html",
+    "imagen": "imagenes/00_ciclo.jpg",
+    "nombre": "Ciclo A5",
+    "nombreConst": "cicloA5",
+    "precio": 850,
+    "tamaño": "A5"
+},
+{
+    "cantidad": 1,
+    "categoria": "acuarelas",
+    "direccion": "loba.html",
+    "imagen": "imagenes/00_edad.jpg",
+    "nombre": "Edad A5",
+    "nombreConst": "edadA5",
+    "precio": 920,
+    "tamaño": "A5"
+},
+{
+    "cantidad": 1,
+    "categoria": "textil",
+    "direccion": "loba.html",
+    "imagen": "imagenes/00_secretos.jpg",
+    "nombre": "Secretos A5",
+    "nombreConst": "secretosA5",
+    "precio": 830,
+    "tamaño": "A5"
+},
+{
+    "cantidad": 1,
+    "categoria": "ilustraciones",
+    "direccion": "loba.html",
+    "imagen": "imagenes/00_nocturna.jpg",
+    "nombre": "Nocturna A5",
+    "nombreConst": "nocturnaA5",
+    "precio": 790,
+    "tamaño": "A5"
+},
+{
+    "cantidad": 1,
+    "categoria": "ilustraciones",
+    "direccion": "loba.html",
+    "imagen": "imagenes/00_estudio.jpg",
+    "nombre": "Estudio A5",
+    "nombreConst": "estudioA5",
+    "precio": 860,
+    "tamaño": "A5"
+}
+]
